@@ -1,0 +1,53 @@
+<!--
+ * @Author: shy 1533103845@qq.com
+ * @Date: 2025-02-17 14:10:26
+ * @LastEditors: shy 1533103845@qq.com
+ * @LastEditTime: 2025-02-17 14:10:39
+ * @FilePath: \React_Learning\01_react_basic\2_JSX基本语法.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello React</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script
+      src="./lib/react.js"
+      ></script>
+    <script
+      src="./lib/react-dom.js"
+      ></script>
+    <script src="./lib/babel.js"></script>
+
+    <script type="text/babel">
+       const msg= "zhangsan"
+       const n = 10
+       const title = "哪吒闹海"
+       const imgUrl = "https://www.helloimg.com/i/2024/10/08/670513635044e.jpg"
+       const href = "https://www.baidu.com"
+       const objStyle = { color: "red", fontSize: "30px"}
+
+       const element = (
+        <div>
+            {/* JSX的注释语法 */}
+            <h2>Hello JSX</h2>
+            <h3>{msg}</h3>
+            <h4>{10 * n}</h4>
+            <h1 title = {title}>我是h1</h1>
+            <img src={imgUrl} alt="图片" style={{width: "80px"}} />
+            <p>
+                <a href = {href}>百度一下</a>
+            </p>
+            <div style={objStyle}>有样式的文字</div>
+        </div>
+      );
+      const root = ReactDOM.createRoot(document.querySelector("#root"));
+      root.render(element);
+    </script>
+  </body>
+</html>

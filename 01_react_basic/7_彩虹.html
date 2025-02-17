@@ -1,0 +1,56 @@
+<!--
+ * @Author: shy 1533103845@qq.com
+ * @Date: 2025-02-17 15:23:15
+ * @LastEditors: shy 1533103845@qq.com
+ * @LastEditTime: 2025-02-17 16:16:50
+ * @FilePath: \React_Learning\01_react_basic\7_彩虹.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello React</title>
+  </head>
+  <style></style>
+  <body>
+    <div id="root"></div>
+    <script src="./lib/react.js"></script>
+    <script src="./lib/react-dom.js"></script>
+    <script src="./lib/babel.js"></script>
+
+    <script type="text/babel">
+      const root = ReactDOM.createRoot(document.querySelector("#root"));
+      let num = 0;
+      let Ncolor = null;
+      let color = [
+        "#800080",
+        "#FF0000",
+        "#FFA500",
+        "#FFFF00",
+        "#008000",
+        "#0000FF",
+        "#4B0082",
+      ];
+
+      const btnClick = () => {
+        num++;
+        Ncolor = { color: color[num % 7] };
+        rootRender();
+      };
+
+      const rootRender = () => {
+        root.render(
+          <div>
+            <h2 style={Ncolor}>你已经点击了{num}次</h2>
+            <button onClick={btnClick}>点击按钮🌈</button>
+            <div>{num > 10 ? <h3>解锁成就：彩虹大师</h3> : <h3></h3>}</div>
+          </div>
+        );
+      };
+      rootRender();
+    </script>
+  </body>
+</html>
