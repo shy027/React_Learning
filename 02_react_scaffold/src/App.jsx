@@ -1,10 +1,10 @@
 // import HelloWorld from "./components/HelloWorld";
-import TaskList from "./components/TaskList"
+import Mission from "./components/Mission"
 
 function App() {
   return (
     <div>
-      <TaskList />
+      <Mission />
     </div>
   )
 }
