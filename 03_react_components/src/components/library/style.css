@@ -1,0 +1,44 @@
+.input {
+    width: 500px;
+    height: 40px;
+    margin: 10px;
+}
+
+.content{
+    text-align: center;
+    padding: 10px;
+    margin: 0 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+body{
+    background-color: rgb(238, 237, 237);
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    margin: 10px;
+    flex-wrap: wrap;
+  }
+
+  li {
+    margin: 10px;
+    flex: 1 1 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: rgb(250, 244, 237);
+    max-width: 30%;
+    
+  }
+
+  .msg{
+    text-align: center;
+    padding: 0 20px;
+  }
+.msgs{
+    white-space: nowrap; /* 防止文字换行 */
+    overflow: hidden; /* 隐藏超出部分 */
+    text-overflow: ellipsis; /* 显示省略号 */
+  }
